@@ -338,14 +338,14 @@ with open('C:\\Users\\mdunlap\\Desktop\\Alabama SLA Automation\\Secrets\\google 
 google_password = google_pass
 
 
-def send_compliance_report(email_members_2):
+def send_compliance_report(email_members):
     subject = 'AL SLA Compliance Monthly Report' + ' '+ '-' + ' ' + formatted_date
 
     body = 'AL SLA Compliance Status Update as of month end ' + ' ' + formatted_date + '.'
     
     msg = MIMEMultipart()
     msg['From'] = email_from
-    msg['To'] = ', '.join(email_members_2)
+    msg['To'] = ', '.join(email_members)
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
 
